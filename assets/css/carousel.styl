@@ -1,0 +1,68 @@
+.carousel-container
+    max-width 1200px
+    position relative
+    margin auto
+    font-family verdana
+    
+.prev, .next
+    position absolute
+    cursor pointer
+    top 50%
+    font-size 30px
+    margin-top -15px
+    padding 8px 16px
+    color white
+    transition 0.25s ease
+    &:hover
+        background-color #09090989
+
+.next
+    right 0
+    
+.picture
+    &--dots
+        margin 10px
+    &--dot
+        cursor pointer
+        height 24px
+        width 24px
+        margin 0 4px
+        background-color lightgray
+        border-radius 50%
+        display inline-block
+        transition 0.25s ease
+    &--number
+        position absolute
+        font-size 18px
+        color white
+        padding 16px 9px
+        z-index 3
+    &--caption
+        text-align center
+        position absolute
+        bottom 0
+        width 100%
+        margin-bottom 20px
+        font-size 24px
+        color white
+    &--dots
+        display flex
+        justify-content center
+        
+.picture--dot:hover, .active
+            background-color gray
+            
+.slide
+    &--image
+        width 100%
+        animation-name fade
+        animation-duration 1.5s
+        
+@keyframes fade {
+    from{
+        opacity .4
+    } 
+    to {
+    opacity 1
+    }
+}
